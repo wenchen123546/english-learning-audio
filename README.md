@@ -15,3 +15,10 @@
 - 依《著作權法》第 9 條，依法令舉行之各類考試試題不得為著作權之標的
 
 由主專案的 `tools/build_past_cap_listen.js` 產生。
+
+## `dict/`：KK 音標用的發音字典
+
+- `dict/cmudict.dict`：[CMU 發音字典](https://github.com/cmusphinx/cmudict)（美式發音，BSD 授權，見 `LICENSE-cmudict`），原檔
+- `dict/ecdict-phonetic.tsv`：[ECDICT](https://github.com/skywind3000/ECDICT)（MIT 授權，見 `LICENSE-ecdict`）只取「單字<Tab>音標」兩欄（原檔 66 MB → 3 MB），CMU 沒收錄的字用它補
+- 主專案的 `tools/build_kk.js` 讀這裡的字典產生網站的 `js/kk.js`；網站本身不會抓這些檔案
+- ECDICT 更新時：下載新的 `ecdict.csv`，在主專案執行 `node tools/build_kk.js --slim <ecdict.csv>`
