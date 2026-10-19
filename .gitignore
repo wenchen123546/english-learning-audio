@@ -1,0 +1,6 @@
+
+# Claude Code：只提交共用設定（外掛、自動安裝套件、工作規則），個人權限與工作資料夾不提交
+.claude/*
+!.claude/settings.json
+!.claude/install-deps.sh
+!.claude/CLAUDE.md
